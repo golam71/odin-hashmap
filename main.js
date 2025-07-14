@@ -84,12 +84,12 @@ class Hashmap {
       while (true) {
         if (currentNode.key === key) {
           currentNode.value = value;
-          return; // key already exists, just update
+          return; 
         }
         if (currentNode.nextNode === null) break;
         currentNode = currentNode.nextNode;
       }
-      currentNode.nextNode = node; // only append if key not found
+      currentNode.nextNode = node; 
     }
     this.resize();
   }
@@ -157,9 +157,9 @@ class Hashmap {
 
 ///test
 
-const test = new Hashmap(); // Already using loadFactor 0.75 and initial capacity 16
+const test = new Hashmap(); 
 
-// Initial population
+
 test.set("apple", "red");
 test.set("banana", "yellow");
 test.set("carrot", "orange");
